@@ -1,8 +1,8 @@
-module.export = {
+module.exports = {
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "postgres",
+    "database": "postgres3",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port":5432
