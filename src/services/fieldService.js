@@ -2,7 +2,8 @@ const db = require('../models');
 
 const getFieldByTypeFromDb= async(typeId)=>{
     const data = await db.Field.findAll({
-        typeId
+        where:{typeId}
+        
     });
     return data;
 };

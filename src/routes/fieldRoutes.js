@@ -7,8 +7,8 @@ const { getFieldByTypeSchema, createFieldSchema, deleteFieldSchema, updateFieldS
 const validator = require('express-joi-validation').createValidator({})
 const fieldRouter = express.Router();
 
-fieldRouter.get('/', validator.body(getFieldByTypeSchema), getFieldByType);
-fieldRouter.post('/', validator.body(createFieldSchema), createField);
+fieldRouter.post('/', validator.body(getFieldByTypeSchema), getFieldByType);
+fieldRouter.post('/post', validator.body(createFieldSchema), createField);
 fieldRouter.delete('/', validator.body(deleteFieldSchema), deleteField);
 fieldRouter.patch('/', validator.body(updateFieldSchema), updateField);
 
