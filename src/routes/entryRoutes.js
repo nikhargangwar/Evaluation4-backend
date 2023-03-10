@@ -8,8 +8,8 @@ const validator = require('express-joi-validation').createValidator({})
 
 const entryRouter = express.Router();
 
-entryRouter.get('/', validator.body(getEntryByTypeSchema), getEntryByType);
-entryRouter.post('/', validator.body(createEntrySchema), createEntry);
+entryRouter.post('/', validator.body(getEntryByTypeSchema), getEntryByType);
+entryRouter.post('/create', validator.body(createEntrySchema), createEntry);
 entryRouter.delete('/', validator.body(deleteEntrySchema), deleteEntry);
 entryRouter.patch('/', validator.body(updateEntrySchema), updateEntry);
 
