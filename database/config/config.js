@@ -25,7 +25,8 @@ module.exports = {
     "username": "postgres",
     "password": "postgres",
     "database": "postgres",
-    "host": "backend-service",
+    // "host": "backend-service",
+    "host": "db",
     "port": 5432,
     "dialect": "postgres"
   }
